@@ -1,0 +1,214 @@
+.indicateurs-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding-bottom: 2rem;
+}
+
+.page-header {
+  padding: 2rem 2rem 1rem;
+  background: white;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.title-underline {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 150px;
+  height: 4px;
+  background: #4caf50;
+}
+
+.page-subtitle {
+  color: #666;
+  margin: 1rem 0 0;
+  font-size: 1.1rem;
+}
+
+.filters-section {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: flex-end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 250px;
+}
+
+.filter-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.filter-select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+}
+
+.apply-btn {
+  padding: 0.75rem 1.5rem;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s;
+  height: fit-content;
+}
+
+.apply-btn:hover {
+  background: #45a049;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.kpi-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kpi-card.pink {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+}
+
+.kpi-card.green {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+.kpi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.kpi-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  flex: 1;
+}
+
+.kpi-trend {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.kpi-trend.up {
+  color: #4caf50;
+}
+
+.kpi-trend.down {
+  color: #f44336;
+}
+
+.kpi-icon {
+  font-size: 1.5rem;
+}
+
+.kpi-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.kpi-period,
+.kpi-description,
+.kpi-comparison {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.chart-section {
+  background: white;
+  padding: 2rem;
+  margin: 0 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1100px) {
+  .filters-section {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .filter-group {
+    min-width: 200px;
+    flex: 1;
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chart-section {
+    margin: 0 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header,
+  .filters-section {
+    padding: 1.5rem;
+  }
+
+  .filters-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  .apply-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .chart-section {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+}
+
